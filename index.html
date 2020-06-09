@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDo List</title>
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<div id="myDIV" class="header">
+	<h2>My To Do List</h2>
+	<input type="text" id="myInput" placeholder="New task here...">
+	<select name="status" id="statusHeader">
+		<option value="todo">To Do</option>
+		<option value="stuck">Stuck</option>
+		<option value="inprogress">In Progress</option>
+		<option value="done">Done</option>
+	</select>
+	<span onclick="newElement()" class="addBtn">Add</span>
+</div>
+<div class="b" style="margin-left: calc((100% - 1500px - 60px) / 2)">
+
+	<div class="stuckCol">
+		STUCK
+	</div>
+	<ul id="stuckList">
+<!--		<li>Stuck 1</li>-->
+<!--		<li class="checked">Pay bills</li>-->
+<!--		<li>Stuck 2</li>-->
+	</ul>
+
+</div>
+<div class="b">
+	<div class="todoCol">
+		TO DO
+	</div>
+	<ul id="todoList">
+<!--		<li>Todo 1</li>-->
+<!--		<li>Todo 2</li>-->
+	</ul>
+</div>
+<div class="b">
+	<div class="progressCol">
+		IN PROGRESS
+	</div>
+	<ul id="progressList">
+<!--		<li>In Progress 1</li>-->
+<!--		<li>In Progress 2</li>-->
+	</ul>
+</div>
+<div class="b">
+	<div class="doneCol">
+		DONE
+	</div>
+	<ul id="doneList">
+<!--		<li>Done 1</li>-->
+<!--		<li>Done 2</li>-->
+	</ul>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
