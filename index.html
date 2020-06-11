@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>ToDo List</title>
 	<link rel="stylesheet" href="index.css">
-	<link rel="icon" href="https://lh3.googleusercontent.com/proxy/CG2C2WQ1rvxjBQGuvvLcRxUmdVLXonN8LX57VI6NpZWw40wx08PVhFmYHfDpVuKDmmFPLA3wpM966MbGfPGsdFQMG6HkElScQcfunYbjpoUxP0Y">
+	<link rel="icon" href="https://image.flaticon.com/icons/png/512/1950/1950715.png">
 
 </head>
 <body>
+
 <div id="myDIV" class="header">
 	<h2>My To Do List</h2>
 	<input type="text" id="myInput" placeholder="New task here...">
@@ -17,7 +18,23 @@
 		<option value="inprogress">In Progress</option>
 		<option value="done">Done</option>
 	</select>
+	<select name="filter" id="filterAdd">
+		<option value="JS">Javascript HW</option>
+		<option value="Java">Java HW</option>
+		<option value="uni">University HW</option>
+		<option value="job">Job Tasks</option>
+	</select>
 	<span onclick="newElement()" class="addBtn">Add</span>
+
+	<input type="text" id="search" onkeyup="Search()" placeholder="Search task">
+	<select name="filter" id="filterSearch"  onchange="filterBYTasks()">
+		<option value="all">All</option>
+		<option value="JS">Javascript HW</option>
+		<option value="Java">Java HW</option>
+		<option value="uni">University HW</option>
+		<option value="job">Job Tasks</option>
+	</select>
+
 </div>
 <div class="b" style="margin-left: calc((100% - 1500px - 60px) / 2)">
 
@@ -25,12 +42,7 @@
 		STUCK
 	</div>
 	<ul id="stuckList">
-		<li>Stuck 1
-<!--			<a class="prev">&#10094;</a>-->
-<!--			<a class="next">&#10095;</a>-->
-		</li>
-<!--		<li class="checked">Pay bills</li>-->
-<!--		<li>Stuck 2</li>-->
+
 	</ul>
 
 </div>
